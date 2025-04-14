@@ -110,7 +110,7 @@ export default function Header() {
                 href="/signin"
                 className="inline-flex items-center justify-center text-sm font-medium h-10 rounded-full lg:rounded-lg p-3"
               >
-                <span className="px-5 hidden lg:block">Sign Up</span>
+                <span className="px-5 hidden lg:block">Sign In</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
