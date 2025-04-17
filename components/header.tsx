@@ -5,13 +5,20 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import Sidebar from "./sidebar"
+import { constrainedMemory } from "process"
+import Search from "./search"
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const pathname = usePathname() 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen)
   }
 
   return (
@@ -51,7 +58,7 @@ export default function Header() {
                     {item.name}
                   </Link>
                   <span
-                    className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-400 transition-transform duration-300 ${
+                    className={`absolute left-0 bottom-0 w-full h-[1px] bg-orange-400 transition-transform duration-300 ${
                       pathname === item.href ? "scale-x-100" : "scale-x-0"
                     }`}
                   ></span>
@@ -92,7 +99,7 @@ export default function Header() {
                   strokeLinejoin="round"
                 ></path>
               </svg>
-              <Link href="" className="text-black hover:text-orange-400">
+              <Link href="" className="text-black hover:text-orange-400" onClick={toggleSearch}>
                 Search
               </Link>
             </div>
@@ -134,6 +141,7 @@ export default function Header() {
       </header>
 
       {isSidebarOpen && <Sidebar onClose={toggleSidebar} />}
+      {isSearchOpen && <Search onClose={toggleSearch} />}
     </>
   )
 }

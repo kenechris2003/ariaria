@@ -8,14 +8,7 @@ interface SidebarProps {
 export default function Sidebar({ onClose }: SidebarProps) {
   return (
     <div className="fixed inset-0 z-50 flex backdrop-blur-md" onClick={onClose}>
-      {/* Overlay */}
-      
-      {/* <div
-        className="bg-white"
-        onClick={onClose} // Close sidebar when clicking outside
-      ></div> */}
 
-      {/* Sidebar Content */}
       <div className=" md:w-1/2 gap-3 bg-white h-full shadow-lg w-3/4">
       <div className="m-20 mt-3">
         <div className="flex justify-between items-center mb-5 gap-10">
