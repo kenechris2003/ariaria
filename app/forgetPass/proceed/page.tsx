@@ -11,7 +11,7 @@ const CustomFont = Localfont({
   
 });
 
-export default function forgetPass() {
+export default function ForgetPass() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (

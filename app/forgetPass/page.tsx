@@ -10,7 +10,7 @@ const CustomFont = Localfont({
   display: "swap",
 })
 
-export default function ForgetPassword() {
+export default function ForgetPass() {
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
