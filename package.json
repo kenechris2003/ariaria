@@ -19,6 +19,7 @@
     "mailgun.js": "^12.0.1",
     "motion": "^12.6.3",
     "next": "^15.2.4",
+    "nextjs-toploader": "^3.8.16",
     "nodemailer": "^6.10.1",
     "postcss": "^8.5.3",
     "postmark": "^4.0.5",

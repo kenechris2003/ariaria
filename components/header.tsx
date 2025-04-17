@@ -5,7 +5,6 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import Sidebar from "./sidebar"
-import { constrainedMemory } from "process"
 import Search from "./search"
 
 export default function Header() {

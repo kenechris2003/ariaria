@@ -2,6 +2,7 @@
 "use client";
 
 
+import NextTopLoader from "nextjs-toploader";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
@@ -46,6 +47,7 @@ export default function RootLayout({
                   !excludeCustomFont ? CustomFont.className : ""
                 } bg-white text-black`}
       >
+        <NextTopLoader color="orange"/>
         {!excludeHeaderFooter && <Header />}
         {children}
         {!excludeHeaderFooter && <Footer />}
